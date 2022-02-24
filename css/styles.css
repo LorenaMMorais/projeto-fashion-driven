@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 1366px;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 89px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+
+    display: flex;
+    align-items: center;
+
+    background: #404EED;
+}
+header img{
+    margin-left: 80.04px;
+    width: 339.23px;
+    height: 56.64px;
+}
