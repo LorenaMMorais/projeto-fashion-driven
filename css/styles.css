@@ -1,11 +1,17 @@
 *{
     box-sizing: border-box;
 }
+.mobile{
+    display: none;
+}
 body{
-    width: 1366px;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
+    --cor-texto: #232323;
+    --cor-fundos-especiais: #404EED;
 }
 header{
+    z-index: 1;
     position: fixed;
     width: 100%;
     height: 89px;
@@ -16,10 +22,240 @@ header{
     display: flex;
     align-items: center;
 
-    background: #404EED;
+    background: var(--cor-fundos-especiais);
 }
 header img{
     margin-left: 80.04px;
     width: 339.23px;
     height: 56.64px;
+}
+main{
+    margin-top: 89px;
+    width: 100vw;
+    height: 785px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #FCFCFC;
+}
+section{
+    width: 50%;
+    height: 100%;
+}
+.lado-esquerdo{
+    height: 706.36px;
+    margin-top: 40.32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.selecao-modelo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+.categoria{
+    width: 385px;
+    height: 158.88px;
+
+    display: flex;
+    flex-direction: column;
+}
+.categoria h1{
+    margin-bottom: 8.58px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: var(--cor-texto);
+}
+.opcoes{
+    display: flex;
+    gap: 40px;
+}
+.opcoes-da-categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opcoes-da-categoria p{
+    height: 21px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: var(--cor-texto);
+}
+.caixa-imagem-opcao{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8.3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    background: #F2F2F2;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+}
+.modelo img{
+    width: 80px;
+}
+.gola img{
+    width: 55px;
+}
+.tecido img{
+    width: 60px;
+}
+.container-referencia{
+    width: 396.27px;
+    height: 70.27px; 
+
+    display: flex;
+    flex-direction: column;
+}
+.container-referencia h2{
+    margin-bottom: 9.27px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: var(--cor-texto);
+}
+input{
+    width: 396.27px;
+    height: 40px;
+    padding-left: 15.73px;
+    background: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+}
+
+input::placeholder{
+    width: 71px;
+    height: 16px;
+
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #818181;
+
+}
+.botao-confirmar-pedido button{
+    width: 398.61px;
+    height: 40px;
+
+    background: #C4C4C4;
+    border: none;
+    border-radius: 10px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+color: #FCFCFC;
+}
+
+.lado-direito{
+    padding: 0px 32px;
+    
+    background-color: var(--cor-fundos-especiais);
+}
+.lado-direito img{
+    width: 100%;
+}
+footer{
+    padding-top: 30.57px;
+    width: 100vw;
+    height: 342px;    
+
+    display: flex;
+    flex-direction: column;
+
+    background: #F2F2F2;
+}
+footer h2{
+    width: 174px;
+    height: 28px;
+
+    margin-left: 121.99px;
+    margin-bottom: 15.21px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: var(--cor-texto);
+}
+.container-ultimos-pedidos{
+    padding-right: 173.05px;
+    height: 237px;
+    margin-left: 118.76px;
+    gap: 16px;
+    overflow-x: scroll;
+    display: flex;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.caixa-ultimos-pedidos{
+    width: 201.69px;
+    height: 100%; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.caixa-ultimos-pedidos img{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 8px;
+}
+.caixa-ultimos-pedidos p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: var(--cor-texto);
+}
+strong{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: var(--cor-texto);
+}
+.habilitado{
+    background: var(--cor-fundos-especiais);
+}
+.selecionado{
+    border: 3px solid var(--cor-fundos-especiais);
+}
+@media (max-width: 780px) {
+    .desktop{
+        display: none;
+    }
 }
