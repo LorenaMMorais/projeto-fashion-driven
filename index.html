@@ -22,19 +22,19 @@
                     <h1>Escolha o modelo</h1>
                     <div class="opcoes">
                         <div class="opcoes-da-categoria .modelo">
-                            <div class="caixa-imagem-opcao" onclick="selecionarModelo(this)">
+                            <div class="caixa-imagem-opcao" id="t-shirt" onclick="selecionarModelo(this)">
                                 <img src="imagens/tshirt.png" alt="T-shirt">
                             </div>
                             <p>T-shirt</p>
                         </div>
                         <div class="opcoes-da-categoria .modelo">
-                            <div class="caixa-imagem-opcao" onclick="selecionarModelo(this)">
+                            <div class="caixa-imagem-opcao" id="top-tank" onclick="selecionarModelo(this)">
                                 <img src="imagens/Camiseta.png" alt="Camiseta">
                             </div>
                             <p>Camiseta</p>
                         </div>
                         <div class="opcoes-da-categoria .modelo">
-                            <div class="caixa-imagem-opcao" onclick="selecionarModelo(this)">
+                            <div class="caixa-imagem-opcao" id="long" onclick="selecionarModelo(this)">
                                 <img src="imagens/Mangalonga.png" alt="Manga longa">
                             </div>
                             <p>Manga longa</p>
@@ -45,19 +45,19 @@
                     <h1>Escolha a gola</h1>
                     <div class="opcoes">
                         <div class="opcoes-da-categoria .gola">
-                            <div class="caixa-imagem-opcao" onclick="selecionarGola(this)">
+                            <div class="caixa-imagem-opcao" id="v-neck" onclick="selecionarGola(this)">
                                 <img src="imagens/GolaV.png" alt="Camisa com Gola V">
                             </div>
                             <p>Gola V</p>
                         </div>
                         <div class="opcoes-da-categoria .gola">
-                            <div class="caixa-imagem-opcao" onclick="selecionarGola(this)">
+                            <div class="caixa-imagem-opcao" id="round" onclick="selecionarGola(this)">
                                 <img src="imagens/GolaRedonda.png" alt="Camisa com Gola Redonda">
                             </div>
-                            <p>GolaRedonda</p>
+                            <p>Gola Redonda</p>
                         </div>
                         <div class="opcoes-da-categoria .gola">
-                            <div class="caixa-imagem-opcao" onclick="selecionarGola(this)">
+                            <div class="caixa-imagem-opcao" id="polo" onclick="selecionarGola(this)">
                                 <img src="imagens/GolaPolo.png" alt="Camisa com Gola Polo">
                             </div>
                             <p>Gola Polo</p>
@@ -68,19 +68,19 @@
                     <h1>Escolha o tecido</h1>
                     <div class="opcoes">
                         <div class="opcoes-da-categoria .tecido">
-                            <div class="caixa-imagem-opcao " onclick="selecionarTecido(this)">
+                            <div class="caixa-imagem-opcao " id="silk" onclick="selecionarTecido(this)">
                                 <img src="imagens/Seda.png" alt="Seda">
                             </div>
                             <p>Seda</p>
                         </div>
                         <div class="opcoes-da-categoria .tecido">
-                            <div class="caixa-imagem-opcao" onclick="selecionarTecido(this)">
+                            <div class="caixa-imagem-opcao" id="cotton" onclick="selecionarTecido(this)">
                                 <img src="imagens/Algodão.png" alt="Árvore de algodão">  
                             </div>
                             <p>Algodão</p>
                         </div>
                         <div class="opcoes-da-categoria .tecido">
-                            <div class="caixa-imagem-opcao" onclick="selecionarTecido(this)">
+                            <div class="caixa-imagem-opcao" id="polyester" onclick="selecionarTecido(this)">
                                 <img src="imagens/Poliester.png" alt="Fórmula químida poliéster">
                             </div>
                             <p>Poliéster</p>
@@ -89,10 +89,10 @@
                 </div>
                 <div class="container-referencia">
                     <h2>Imagem de referência</h1>
-                    <input type="text" placeholder="Insira o link">
+                    <input type="text" class="link-img" placeholder="Insira o link"s>
                 </div>
                 <div class="botao-confirmar-pedido">
-                    <button><p>Confirmar pedido</p></button>
+                    <button onclick="habilitarBotao(this)">Confirmar pedido</button>
                 </div>
             </div>
         </section>
@@ -103,28 +103,9 @@
     <footer>
         <h2>Ultimos pedidos</h2>
         <div class="container-ultimos-pedidos">
-            <div class="caixa-ultimos-pedidos">
-                <img class="img-ultimos-pedidos" src="imagens/Blusa1.png" alt="T-shirt com gola redonda e estampa 'sua ideia estampada aqui'">
-                <p><strong>Criador: </strong>Agata</p>
-            </div>
-            <div class="caixa-ultimos-pedidos">
-                <img class="img-ultimos-pedidos" src="imagens/Blusa2.png" alt="T-shirt com gola redonda e estampa 'RANÇO;'">
-                <p><strong>Criador: </strong>Bruna</p>
-            </div>
-            <div class="caixa-ultimos-pedidos">
-                <img class="img-ultimos-pedidos" src="imagens/Blusa3.png" alt="T-shirt com gola redonda e estampa">
-                <p><strong>Criador: </strong>Camila</p>
-            </div>
-            <div class="caixa-ultimos-pedidos">
-                <img class="img-ultimos-pedidos" src="imagens/Blusa4.png" alt="T-shirt com gola redonda e estampa 'WOWMOM'">
-                <p><strong>Criador: </strong>Daniel</p>
-            </div>
-            <div class="caixa-ultimos-pedidos">
-                <img class="img-ultimos-pedidos" src="imagens/Blusa5.png" alt="T-shirt com gola redonda e estampa 'Black lives matter'">
-                <p><strong>Criador: </strong>Ester</p>
-            </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>

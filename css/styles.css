@@ -85,7 +85,11 @@ section{
     align-items: center;
 }
 .opcoes-da-categoria p{
+    width: 113px;
     height: 21px;
+    
+    display: flex;
+    justify-content: center;
     
     font-weight: 400;
     font-size: 18px;
@@ -117,8 +121,7 @@ section{
     width: 60px;
 }
 .container-referencia{
-    width: 396.27px;
-    height: 70.27px; 
+    width: 385px;
 
     display: flex;
     flex-direction: column;
@@ -171,7 +174,7 @@ input::placeholder{
     font-size: 20px;
     line-height: 23px;
 
-color: #FCFCFC;
+    color: #FCFCFC;
 }
 
 .lado-direito{
