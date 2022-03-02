@@ -2,7 +2,6 @@ const LINK_API = "https://mock-api.driven.com.br/api/v4/shirts-api/shirts";
 let id = null;
 
 let nomeUsuario = '';
-let verificaSeEstaHabilitado;
 let urlAuxiliar = 'URL inválida'
 let linkImagem = '';
 let modeloEscolhido = null, golaEscolhida = null, tecidoEscolhido = null;
@@ -27,10 +26,14 @@ function pegarUltimosPedidos() {
     promessa.then(renderizarUltimosPedidos);
 }  
 
-function postEmUltimosPedidos(){
+function confirmarPedido(){
     const promessa = axios.post(`${LINK_API}`,
     {model: modeloEscolhido, neck: golaEscolhida, material: tecidoEscolhido, image: linkImagem, owner: nomeUsuario, author: nomeUsuario});
-    promessa.then();
+    promessa.then(() => {
+        pegarUltimosPedidos();
+        alert("Pedido Confirmado")
+    });
+    promessa.catch(erro => {alert ("Ops, não conseguimos processar sua encomenda")});
 }
 
 function renderizarUltimosPedidos(pedidosAnteriores){
@@ -39,7 +42,6 @@ function renderizarUltimosPedidos(pedidosAnteriores){
     containerUltimosPedidos.innerHTML = "";
     for(let i = 0; i < arrayPedidos.length; i++){
         let pedido = arrayPedidos[i];
-        console.log(pedido);
         containerUltimosPedidos.innerHTML += `
         <div class="caixa-ultimos-pedidos">
             <img class="img-ultimos-pedidos" src="${pedido.image}" alt="${pedido.image}">
@@ -78,6 +80,7 @@ function selecionarTecido(opcaoTecido) {
 
 function obterLink() {
     linkImagem = document.querySelector(".link-img").value;
+    console.log(linkImagem);
     if(validarUrl(linkImagem) === true){
         urlAuxiliar = 'url válida';
     }else{
@@ -95,19 +98,7 @@ function habilitarBotao(){
     const botao = document.querySelector("button");
     if (modeloEscolhido !== null && golaEscolhida !== null && tecidoEscolhido !== null && urlAuxiliar === 'url válida'){
             botao.style.backgroundColor = "#404EED";
-            verificaSeEstaHabilitado = true;
     }else if(urlAuxiliar === 'url inválida'){
         botao.style.backgroundColor = "#C4C4C4";
-        verificaSeEstaHabilitado = false;
-    }
-    confirmarPedido();
-}
-
-function confirmarPedido(){
-    if (verificaSeEstaHabilitado === true){
-        postEmUltimosPedidos();
-        alert("Sua encomenda foi validada com sucesso!")
-    }else{
-        alert("Houve algum erro no seu pedido");
     }
 }
